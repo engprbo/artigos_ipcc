@@ -1,0 +1,96 @@
+Universidade de Coimbra
+
+Jônatas Augusto Manzolli
+Ph.D. candidate – Sustainable Energy Systems
+
+GESTÃO DE ENERGIA ADAPTATIVA
+ESTRATÉGIAS PARA FROTAS DE AUTOCARROS ELÉTRICOS
+Uma abordagem híbrida com inteligência artificial e métodos de otimização
+
+Relatório apresentado em cumprimento parcial dos requisitos do curso de Projeto de Tese.
+Pesquisa orientada pelo Professor Carlos Henggeler Antunes e coorientada pelo Professor João Pedro Trovão.
+
+July 2021
+
+RESUMO
+- Breve introdução indicando a necessidade da descarbonização do setor de transporte.
+- Indica a necessidade:
+  . desenvolvimento de Baterias Elétricas para Ônivus (BEB).
+- Indica o problema:
+  . o carregamento das baterias pode ser problema no sistema de distribuição e pode colocar em risco os horários dos transportes públicos.
+- Indica a solução:
+  . previsão da procura de energia e estratégia de carregamento inteligente.
+- Breve descrição do trabalho:
+  . Propõe desenvolver uma nova estratégia de gestão de energia (EMS) para resolver os problemas de custos operacionais e impactos na rede
+- Breve descrição da metodologia utilizada:
+  . modelo de previsão do consumo de energia BEB baseado em dados;
+  . modelo de otimização de dois níveis para apoiar o EMS, considerando a utilidade e as interações dos operadores de transporte público;
+  . abordagem de solução híbrida (baseada em programação matemática e algoritmos evolutivos) para lidar com a dificuldade metodológica e computacional do problema matemático proposto para encontrar soluções de equilíbrio.
+- Palavras chaves: autocarros elétricos; aprendizagem automática; otimização matemática; comportamento estocástico; gestão de energia; carregamento inteligente.
+
+ABSTRACT
+
+ÍNDICE
+
+LISTA DE FIGURAS
+
+ABREVIAÇÕES E SIGLAS
+BEB	Battery electric bus
+BEV	Battery electric vehicle
+DSO	Distribution System Operator
+ECPM	Energy consumption prediction model
+EMS	Energy management strategy
+FCV	Fuel cell vehicle
+HEV	Hybrid electric vehicle
+ICEV	Internal combustion engine vehicle
+MG	Micro-grids
+MILP	Mixed-integer linear programming
+ML	Machine learning
+PDS	Power distribution system
+PTO	Public transport operator
+ToU	Time of use tariff
+V2G	Vehicle to grid
+
+INTRODUÇÃO
+
+- Aborda as mudanças climáticas e as emissões de CO2 do setor de transporte e dos ônibus especificamente.
+- Fala sobre as soluções já existente para a diminuição das emissões de gás de efeito estufa.
+- Diz que:
+  . a eletrificação do setor á a saída para a descarbonização do setor e que está em estágio inicial de desenvolvimento;
+  . as baterias de ônibus aparecem como a alternativa mais amigável, pois os carros particulares serão um problema no futuro por causa de estacionamento e que o transporte público é a alternativa;
+  . os ônibus representam mais que 80% do transporte de pessoas no mundo e se dedicar a isso pode mudar a qualidade de vida das pessoas;
+  . a redução dos custos operacionais de ônibus elétrico compensa o investimento.
+- Mostra um gráfico de aumento do mercado de baterias para ônibus desde 2019 e faz previsão até 2040.
+Nota: Antes do gráfico tem explicação do gráfico.
+- Aponta as dificuldades para atingir o 100% da frota elétrica:
+  . desenvolvimento da tecnologia;
+  . custo inicial da aquisição;
+  . questões operacionais.
+- Mostra uma figura com os desafios da mudança, mas não explica tudo.
+
+MOTIVAÇÃO
+- O crescimento das baterias de ônibus cria um problema para o grid de energia, o que implica em previsão de demanda e estratégia de carregamento inteligente. Assim, esta proposta visa desenvolver uma estrutura adaptativa de estratégia de gestão de energia (EMS), considerando os requisitos estocásticos da operação dos veículos, permitindo também a interação com a rede através de esquemas veículo para rede (V2G).
+- Objetivo principal:
+  . evitar problemas na rede devido ao carregamento massivo permitindo a operação confiável do sistema de ônibus.
+  . evitar picos elevados de consumo de energia permitindo a poupança para os operadores de transportes públicos (PTO), melhorar os custos operacionais do sistema, a fiabilidade e a segurança operacional da rede.
+Nota: A inclusão do comércio de energia com o esquema V2G, pode configurar uma vantagem económica para os PTOs, ao mesmo tempo que apoia o sistema de distribuição de energia (PDS) com serviços auxiliares.
+- Resultado esperado:
+  . nova estrutura de otimização adaptativa que considera os requisitos estocásticos da operação dos veículos e a interação com o grid.
+  . estratégia de carregamento inteligente, levando em consideração a configuração dos carregadores rápidos das baterias dos ônibus.
+
+OBJETIVOS
+- O desafio principal:
+  .  projetar uma estrutura de otimização, considerando as restrições operacionais dinâmicas e os requisitos de uma rede BEBs, ao mesmo tempo em que se encontra o equilíbrio ideal para a interação com a rede.
+- Questõs de pesquisa:
+  1. Como eletrificar as redes de autocarros da forma mais eficiente, minimizando os custos operacionais e os impactos na rede elétrica e maximizando a autonomia?
+  2. Como prever o consumo de energia do veículo para um ciclo de condução diante de um comportamento estocástico?
+  3. É possível reduzir a taxa de carga máxima, através de um algoritmo de controlo, sem afetar o horário da rota?
+- O objetivo principal:
+  . projetar uma nova estratégia de gestão de energia considerando a variação estocástica do funcionamento do sistema, fornecendo uma resposta de carregamento inteligente e integração com veículos elétrico, com a possibilidade dos operadores participarem de serviços auxiliares no mercado emergente.
+- Objetivos específicos:
+
+
+
+fornecendo uma resposta de carregamento inteligente e integração V2G 
+
+
